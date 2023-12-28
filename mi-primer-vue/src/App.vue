@@ -2,7 +2,7 @@
 const name = 'Vue dinamico'
 const stylecolor = 'color:blue'
 const arrayColores = ['blue' , 'red' , 'peru']
-const activo = false
+const activo = null
 
 </script>
 
@@ -11,7 +11,8 @@ const activo = false
   <h2>{{arrayColores}}</h2>
   <h2 :style="`color:${arrayColores}`">Soy de Perú</h2>
   <h2 v-if="activo">Estoy activo</h2>
-  <p v-if="!activo"> Estoy inactivo</p>
+  <p v-else-if="activo === false">Estoy inactivo</p>
+  <p v-else="!activo"> Estoy indeciso</p>
 </template>
 
 <style>
